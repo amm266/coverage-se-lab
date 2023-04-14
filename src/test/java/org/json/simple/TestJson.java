@@ -52,6 +52,17 @@ public class TestJson {
         assertEquals("{\"1\":2}", jsonString);
     }
 
+        @Test
+    public void testJsonArrayFloat() throws Exception {
+        System.out.println("======JsonFloatArray======");
+
+        float[] floats = {1.0f, 2.0f, 3.0f};
+        String jsonString = JSONArray.toJSONString(floats);
+        System.out.println("======encoded float array======");
+        System.out.println(jsonString);
+        System.out.println();
+        assertEquals("[1.0,2.0,3.0]", jsonString);
+    }
     @Test
     public void testJSONArrayCollection() {
         final ArrayList<String> testList = new ArrayList<String>();
