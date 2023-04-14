@@ -33,10 +33,23 @@ public class TestJson {
         ints[0] = 0;
         ints[1] = 10;
         String jsonString = JSONValue.toJSONString(ints);
-		System.out.println("======encoded array======");
+        System.out.println("======encoded array======");
         System.out.println(jsonString);
-		System.out.println();
-		assertEquals("[0,10]", jsonString);
+        System.out.println();
+        assertEquals("[0,10]", jsonString);
+    }
+
+    @Test
+    public void testJsonMap() throws Exception {
+        System.out.println("======JsonMap======");
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put(1, 2);
+        String jsonString = jsonObject.toJSONString();
+        System.out.println("======encoded map======");
+        System.out.println(jsonString);
+        System.out.println();
+        assertEquals("{\"1\":2}", jsonString);
     }
 
     @Test
