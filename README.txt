@@ -1,2 +1,1 @@
-Please visit:
-http://code.google.com/p/json-simple/
+Please visit the `production` branch.
