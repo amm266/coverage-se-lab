@@ -60,3 +60,24 @@ public void testJsonArrayFloat() throws Exception {
 Effect on line coverage:\
 org.json.simple: 32% to 33%\
 JSONArray: 16% to 23%
+
+test methode JSONParser: testing JSONParser.Parser by using it to pars an Integer array.
+
+```
+    @Test
+    public void testJsonParser() throws Exception {
+        System.out.println("======JsonParser======");
+
+        JSONParser parser = new JSONParser();
+        Object o = parser.parse("[1,2,3]");
+        System.out.println("======parser output======");
+        System.out.println(o.toString());
+        System.out.println();
+        assertEquals("[1,2,3]", o.toString());
+    }
+```
+
+Effect on line coverage:\
+org.json.simple: 33% to 34%\
+parser: 33% to 34%\
+JSONParser: 14% to 15%

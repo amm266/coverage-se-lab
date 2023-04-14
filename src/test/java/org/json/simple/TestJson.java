@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 
+import org.json.simple.parser.JSONParser;
 import org.junit.Test;
 
 public class TestJson {
@@ -52,7 +53,7 @@ public class TestJson {
         assertEquals("{\"1\":2}", jsonString);
     }
 
-        @Test
+    @Test
     public void testJsonArrayFloat() throws Exception {
         System.out.println("======JsonFloatArray======");
 
@@ -63,6 +64,19 @@ public class TestJson {
         System.out.println();
         assertEquals("[1.0,2.0,3.0]", jsonString);
     }
+
+    @Test
+    public void testJsonParser() throws Exception {
+        System.out.println("======JsonParser======");
+
+        JSONParser parser = new JSONParser();
+        Object o = parser.parse("[1,2,3]");
+        System.out.println("======parser output======");
+        System.out.println(o.toString());
+        System.out.println();
+        assertEquals("[1,2,3]", o.toString());
+    }
+
     @Test
     public void testJSONArrayCollection() {
         final ArrayList<String> testList = new ArrayList<String>();
