@@ -1,7 +1,10 @@
+## Tests
+
 test method encode:
 testing JSONValue.toJSONString method by transferring an integer array to jsonString:
 
-```    @Test
+```java   
+    @Test
     public void testEncode() throws Exception {
         System.out.println("=======encode=======");
 
@@ -23,7 +26,7 @@ JSONValue: 20% to 40%
 test method jsonMap: testing JsonObject.toJSONString by putting a pair of key value and transfer JSONObject to json
 string.
 
-```
+```java
     @Test
     public void testJsonMap() throws Exception {
         System.out.println("======JsonMap======");
@@ -44,7 +47,7 @@ JSONObject: 0% to 55%
 
 test method jsonFloatArray: testing JSONArray.toJSONString using float arraty input.
 
-```
+```java
 public void testJsonArrayFloat() throws Exception {
         System.out.println("======JsonFloatArray======");
 
@@ -63,7 +66,7 @@ JSONArray: 16% to 23%
 
 test method JSONParser: testing JSONParser.Parser by using it to pars an Integer array.
 
-```
+```java
     @Test
     public void testJsonParser() throws Exception {
         System.out.println("======JsonParser======");
@@ -84,7 +87,7 @@ JSONParser: 14% to 15%
 
 test method JsonMapParser: testing JSONValue.parseWithException using map json string input.
 
-```
+```java
     @Test
     public void testParsMap() throws Exception {
         System.out.println("======JsonMapParser======");
@@ -101,3 +104,15 @@ Effect on line coverage:\
 org.json.simple: 34% to 39%\
 parser: 34% to 41%\
 Yylex: 62% to 66%
+
+## Details
+
+#### `testEncode()`: This test method tests the JSONValue.toJSONString() method by passing an integer array as input and checking the generated JSON string against the expected output. It helps to test the encoding of an integer array to a JSON string and verifies that the generated JSON string matches the expected output.
+
+#### `testJsonMap()`: This test method tests the JSONObject.toJSONString() method by creating a JSONObject with a key-value pair, converting it to a JSON string, and then comparing it with the expected output. It helps to test the creation of a JSON object with a key-value pair and verifies that the generated JSON string matches the expected output.
+
+#### `testJsonArrayFloat()`: This test method tests the JSONArray.toJSONString() method by passing a float array as input and checking the generated JSON string against the expected output. It helps to test the encoding of a float array to a JSON string and verifies that the generated JSON string matches the expected output.
+
+#### `testJsonParser()`: This test method tests the JSONParser.parse() method by parsing a JSON string containing an integer array and checking the parsed object against the expected output. It helps to test the parsing of a JSON string to an object and verifies that the parsed object potentially matches the expected output(by again converting it to string).
+
+#### `testParsMap()`: This test method tests the JSONValue.parseWithException() method by parsing a JSON string containing a map and checking the parsed object against the expected output. It helps to test the parsing of a JSON string to an object and verifies that the parsed object matches the expected output(by again converting it to string).
