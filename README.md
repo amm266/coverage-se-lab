@@ -61,7 +61,7 @@ Effect on line coverage:\
 org.json.simple: 32% to 33%\
 JSONArray: 16% to 23%
 
-test methode JSONParser: testing JSONParser.Parser by using it to pars an Integer array.
+test method JSONParser: testing JSONParser.Parser by using it to pars an Integer array.
 
 ```
     @Test
@@ -81,3 +81,23 @@ Effect on line coverage:\
 org.json.simple: 33% to 34%\
 parser: 33% to 34%\
 JSONParser: 14% to 15%
+
+test method JsonMapParser: testing JSONValue.parseWithException using map json string input.
+
+```
+    @Test
+    public void testParsMap() throws Exception {
+        System.out.println("======JsonMapParser======");
+
+        Object o = JSONValue.parseWithException("{\"1\":2}");
+        System.out.println("======parser output======");
+        System.out.println(o.toString());
+        System.out.println();
+        assertEquals("{\"1\":2}" ,o.toString());
+    }
+```
+
+Effect on line coverage:\
+org.json.simple: 34% to 39%\
+parser: 34% to 41%\
+Yylex: 62% to 66%

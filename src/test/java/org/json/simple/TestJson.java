@@ -6,6 +6,8 @@ package org.json.simple;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.FileWriter;
+import java.io.Writer;
 import java.util.ArrayList;
 
 import org.json.simple.parser.JSONParser;
@@ -75,6 +77,17 @@ public class TestJson {
         System.out.println(o.toString());
         System.out.println();
         assertEquals("[1,2,3]", o.toString());
+    }
+
+    @Test
+    public void testParsMap() throws Exception {
+        System.out.println("======JsonMapParser======");
+
+        Object o = JSONValue.parseWithException("{\"1\":2}");
+        System.out.println("======parser output======");
+        System.out.println(o.toString());
+        System.out.println();
+        assertEquals("{\"1\":2}" ,o.toString());
     }
 
     @Test
